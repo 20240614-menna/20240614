@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>دعوة زفاف</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Amiri:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Cairo',sans-serif;
+
+background:#fff9fb;
+
+overflow-x:hidden;
+
+color:#5b3c48;
+
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background:
+
+radial-gradient(circle,#f6d7e3 2px,transparent 2px),
+
+radial-gradient(circle,#edd0d9 1px,transparent 1px);
+
+background-size:80px 80px,40px 40px;
+
+opacity:.25;
+
+z-index:-1;
+
+}
+
+section{
+
+padding:80px 20px;
+
+}
+
+.container{
+
+width:95%;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+#cover{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:
+
+linear-gradient(rgba(255,255,255,.65),rgba(255,255,255,.65)),
+
+url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+.cover-card{
+
+background:white;
+
+padding:70px;
+
+border-radius:35px;
+
+border:5px solid #d7b37d;
+
+text-align:center;
+
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+width:95%;
+max-width:850px;
+
+}
+
+.cover-card h1{
+
+font-size:65px;
+
+color:#8a2f59;
+
+margin-bottom:20px;
+
+}
+
+.cover-card p{
+
+font-size:30px;
+
+margin-bottom:35px;
+
+}
+
+.cover-card button{
+
+background:#78214c;
+
+color:white;
+
+border:none;
+
+padding:18px 45px;
+
+font-size:24px;
+
+border-radius:50px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.cover-card button:hover{
+
+transform:scale(1.05);
+
+background:#7a3156;
+
+}
+
+#main{
+
+display:none;
+
+animation:fade 1s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:55px;
+
+color:#8b3159;
+
+margin-bottom:35px;
+
+}
+
+.verse{
+
+background:white;
+
+border-radius:25px;
+
+padding:40px;
+
+border:2px solid #e7cfa5;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+font-family:'Amiri',serif;
+
+font-size:31px;
+
+line-height:2;
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.parents{
+
+display:grid;
+
+grid-template-columns:1fr auto 1fr;
+
+align-items:center;
+
+gap:30px;
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.parents h2{
+
+font-size:45px;
+
+color:#8b3159;
+
+}
+
+.parents h3{
+
+font-size:60px;
+
+margin-top:10px;
+
+color:#6b2946;
+
+}
+
+.cross{
+
+font-size:75px;
+
+color:#b68039;
+
+}
+
+.invite{
+
+text-align:center;
+
+font-size:34px;
+
+margin-bottom:70px;
+
+}
+
+.couple{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:50px;
+
+margin-bottom:70px;
+
+}
+
+.couple h1{
+
+font-size:85px;
+
+font-family:'Great Vibes',cursive;
+
+color:#8b3159;
+
+}
+
+.heart{
+
+font-size:60px;
+
+color:#d65b8b;
+
+}
+.cards{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+margin-bottom:70px;
+}
+.card{
+
+background:#fff;
+
+padding:40px;
+
+border-radius:25px;
+
+border:2px solid #e7cfaa;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+.card h3{
+
+font-size:32px;
+
+color:#8b3159;
+
+margin-bottom:25px;
+
+text-align:center;
+
+}
+
+.card p{
+
+font-size:22px;
+
+line-height:2;
+
+text-align:center;
+
+}
+
+.map{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.map a{
+
+display:inline-block;
+
+padding:18px 45px;
+
+background:#8b3159;
+
+color:#fff;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-size:22px;
+
+transition:.3s;
+
+}
+
+.map a:hover{
+
+background:#820841;
+
+transform:scale(1.05);
+
+}
+
+.countdown{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.countdown h2{
+
+font-size:45px;
+
+color:#8b3159;
+
+margin-bottom:35px;
+
+}
+
+.counter{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+.box{
+
+width:130px;
+
+height:130px;
+
+background:white;
+
+border-radius:20px;
+
+border:2px solid #e8cfaa;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.box span{
+
+font-size:42px;
+
+font-weight:bold;
+
+color:#8b3159;
+
+}
+
+.box small{
+
+font-size:20px;
+
+margin-top:10px;
+
+}
+
+.music{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.music button{
+
+background:#b15d85;
+
+color:#fff;
+
+border:none;
+
+padding:16px 40px;
+
+border-radius:40px;
+
+font-size:22px;
+
+cursor:pointer;
+
+}
+
+footer{
+
+background:#8b3159;
+
+color:white;
+
+padding:30px;
+
+text-align:center;
+
+font-size:22px;
+
+}
+
+@media(max-width:768px){
+section{padding:50px 15px;}
+.container{width:98%;}
+.cover-card{width:100%;max-width:100%;padding:30px 20px;}
+.cover-card h1{font-size:34px;}
+.cover-card p{font-size:20px;}
+.parents{grid-template-columns:1fr;}
+.cross{display:none;}
+.couple{flex-direction:column;gap:15px;}
+.couple h1{font-size:52px;}
+.title{font-size:32px;}
+.verse{font-size:21px;padding:25px 18px;}
+.invite{font-size:24px;}
+.cards{grid-template-columns:1fr;}
+.card{width:100%;padding:25px 20px;}
+.box{width:80px;height:80px;}
+.box span{font-size:28px;}
+.box small{font-size:14px;}
+}
+
+.cover-card h1{
+
+font-size:42px;
+
+}
+
+.cover-card p{
+
+font-size:22px;
+
+}
+
+.parents{
+
+grid-template-columns:1fr;
+
+}
+
+.cross{
+
+display:none;
+
+}
+
+.couple{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.couple h1{
+
+font-size:60px;
+
+}
+
+.title{
+
+font-size:38px;
+
+}
+
+.verse{
+
+font-size:24px;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- شاشة البداية -->
+
+<section id="cover">
+
+    <div class="cover-card">
+
+        <h1>دعوة لحضور الإكليل</h1>
+
+        <p>
+            يشرفنا حضوركم ومشاركتنا فرحتنا
+        </p>
+
+        <button id="openInvitation">
+            ❤ افتح الدعوة ❤
+        </button>
+
+    </div>
+
+</section>
+
+<!-- الصفحة الرئيسية -->
+
+<div id="main">
+
+<section>
+
+<div class="container">
+
+<h2 class="title">
+بسم الآب والابن والروح القدس
+</h2>
+
+<div class="verse">
+
+"والآن قد اخترت وقدست هذا البيت ليكون اسمي فيه إلى الأبد،
+وتكون عيناي وقلبي هناك كل الأيام"
+
+<br><br>
+
+(2 أخبار الأيام 16:7)
+
+</div>
+
+<h2 class="title">
+
+يتشرف كل من
+
+</h2>
+
+<div class="parents">
+
+<div>
+
+<div>الأستاذ</div>
+
+<h3>كمال كامل</h3>
+
+</div>
+
+<div class="cross">
+
+✝
+
+</div>
+
+<div>
+
+<div>المعلم</div>
+
+<h3>مدحت لمعي</h3>
+
+</div>
+
+</div>
+
+<div class="invite">
+
+بدعوة سيادتكم والعائلة الكريمة لحضور صلاة إكليل
+
+</div>
+
+<div class="couple">
+
+<h1>Abanoub</h1>
+
+<div class="heart">
+
+❤
+
+</div>
+
+<h1>Madona</h1>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+ صلاة الإكليل ✝
+
+
+</h3>
+
+<p>
+
+الاثنين
+
+</p>
+
+<p>
+
+20 يوليو 2026
+
+</p>
+
+<p>
+
+الساعة 8:00 مساءً
+
+</p>
+
+<p>
+
+كنيسة مارجرجس والأنبا إبرام
+
+</p>
+
+<p>
+
+هليوبوليس - مصر الجديدة
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+💍ويليه حفل الزفاف
+
+
+</h3>
+
+<p>
+
+قاعة Seven Sky
+
+</p>
+
+<p>
+
+نادي دار المركبات
+
+</p>
+<p>
+
+أول شارع الكابلات
+
+</p>
+
+<p>
+
+أمام محطة البنزين
+
+</p>
+
+<p>
+
+أقرب محطة مترو: العباسية
+
+</p>
+
+</div>
+
+</div>
+
+<div class="map">
+
+<a href="https://maps.google.com" target="_blank">
+
+📍 اضغط لفتح الموقع
+
+</a>
+
+</div>
+<section class="countdown">
+
+    <h2>العد التنازلي</h2>
+
+    <div class="counter">
+
+        <div class="box">
+            <span id="days">00</span>
+            <small>يوم</small>
+        </div>
+
+        <div class="box">
+            <span id="hours">00</span>
+            <small>ساعة</small>
+        </div>
+
+        <div class="box">
+            <span id="minutes">00</span>
+            <small>دقيقة</small>
+        </div>
+
+        <div class="box">
+            <span id="seconds">00</span>
+            <small>ثانية</small>
+        </div>
+
+    </div>
+<section class="container">
+
+<div class="card" style="
+width:95%;
+max-width:600px;
+margin:auto;
+padding:25px;
+text-align:center;
+box-sizing:border-box;
+">
+
+<h3>💌 تأكيد الحضور</h3>
+
+<p>برجاء كتابة اسمك لتأكيد الحضور</p>
+
+<form action="https://formsubmit.co/20240614@stud.fci-cu.edu.eg" method="POST">
+
+<input
+type="text"
+name="الاسم"
+placeholder="اكتب اسمك هنا"
+required
+style="
+width:100%;
+box-sizing:border-box;
+padding:18px;
+margin:20px 0;
+border:2px solid #e7cfaa;
+border-radius:15px;
+font-size:20px;
+font-family:Cairo;
+">
+
+<button
+type="submit"
+style="
+background:#8b3159;
+color:#fff;
+padding:15px 40px;
+border:none;
+border-radius:40px;
+font-size:20px;
+cursor:pointer;
+width:100%;
+max-width:350px;
+">
+✔ تأكيد الحضور
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+❤ نتشرف بحضوركم ومشاركتكم أجمل لحظات حياتنا ❤
+</footer>
+
+</div>
+
+</section>
+
+</div>
+
+<script>
+
+const cover = document.getElementById("cover");
+
+const main = document.getElementById("main");
+
+document.getElementById("openInvitation").onclick = function(){
+
+cover.style.display="none";
+
+main.style.display="block";
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+const targetDate=new Date("July 20, 2026 20:00:00").getTime();
+
+setInterval(function(){
+
+const now=new Date().getTime();
+
+const distance=targetDate-now;
+
+const days=Math.floor(distance/(1000*60*60*24));
+
+const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+
+const seconds=Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("days").innerHTML=days;
+
+document.getElementById("hours").innerHTML=hours;
+
+document.getElementById("minutes").innerHTML=minutes;
+
+document.getElementById("seconds").innerHTML=seconds;
+
+},1000);
+
+const music=document.getElementById("audio");
+
+const btn=document.getElementById("musicBtn");
+
+btn.onclick=function(){
+
+if(music.paused){
+
+music.play();
+
+btn.innerHTML="⏸ إيقاف الموسيقى";
+
+}else{
+
+music.pause();
+
+btn.innerHTML="🎵 تشغيل الموسيقى";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
